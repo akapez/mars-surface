@@ -3,7 +3,7 @@ import { Surface } from "./Surface";
 const Territory = () => {
   return (
     <mesh>
-      <Surface />
+      <Surface scale={[3, 3, 3]} />
     </mesh>
   );
 };
