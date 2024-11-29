@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci-fi Generator
+* source:	https://sketchfab.com/3d-models/sci-fi-generator-685fc34284574996b09ae0f826367e90
+* author:	Eh (https://sketchfab.com/Just_Eh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci-fi Generator" (https://sketchfab.com/3d-models/sci-fi-generator-685fc34284574996b09ae0f826367e90) by Eh (https://sketchfab.com/Just_Eh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
