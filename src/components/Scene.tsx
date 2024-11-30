@@ -53,7 +53,7 @@ const Scene = () => {
             <fog attach="fog" args={["#d0d0d0", 30, 80]} />
             <ambientLight intensity={0.4} />
             <Light />
-            <Physics gravity={[0, -30, 0]} debug>
+            <Physics gravity={[0, -30, 0]}>
               <Territory />
               <Control />
             </Physics>
