@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mars Perseverance Landing Site - Raw Scan
+* source:	https://sketchfab.com/3d-models/mars-perseverance-landing-site-raw-scan-d017d148d0554061b0c8064eb648af56
+* author:	Nik (https://sketchfab.com/nikska)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mars Perseverance Landing Site - Raw Scan" (https://sketchfab.com/3d-models/mars-perseverance-landing-site-raw-scan-d017d148d0554061b0c8064eb648af56) by Nik (https://sketchfab.com/nikska) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
