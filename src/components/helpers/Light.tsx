@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { easing } from "maath";
 
-export const Light: React.FC = () => {
+export function Light() {
   const ref = useRef<THREE.Group>(null);
 
   useFrame((state, delta) => {
@@ -30,4 +30,4 @@ export const Light: React.FC = () => {
       </directionalLight>
     </group>
   );
-};
+}

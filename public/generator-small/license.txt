@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mars Base Crate Yellow
+* source:	https://sketchfab.com/3d-models/mars-base-crate-yellow-4107d7e6dfc848058c6175ce3267f49b
+* author:	PatrickStevens (https://sketchfab.com/PatrickStevens)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mars Base Crate Yellow" (https://sketchfab.com/3d-models/mars-base-crate-yellow-4107d7e6dfc848058c6175ce3267f49b) by PatrickStevens (https://sketchfab.com/PatrickStevens) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

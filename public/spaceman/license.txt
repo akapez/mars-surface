@@ -1,0 +1,11 @@
+Model Information:
+* title:	Space man
+* source:	https://sketchfab.com/3d-models/space-man-bd46f87913ea4c219019f6b6d0e96e3d
+* author:	LostBoyz2078 (https://sketchfab.com/LostModels2025)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Space man" (https://sketchfab.com/3d-models/space-man-bd46f87913ea4c219019f6b6d0e96e3d) by LostBoyz2078 (https://sketchfab.com/LostModels2025) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

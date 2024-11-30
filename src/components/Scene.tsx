@@ -1,31 +1,15 @@
 import { Canvas } from "@react-three/fiber";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import Territory from "./Territory";
-import { CameraControls, Loader, Sky } from "@react-three/drei";
-import { createXRStore, IfInSessionMode, TeleportTarget, XR, XROrigin } from "@react-three/xr";
-import { Light, Camera } from "./helpers";
-import { Vector3 } from "three";
+import { KeyboardControls, Loader, PointerLockControls, Sky } from "@react-three/drei";
+import { createXRStore, XR } from "@react-three/xr";
+import { Light } from "./helpers";
+import { Control } from "./Control";
+import { Physics } from "@react-three/rapier";
 
-const store = createXRStore({
-  hand: { teleportPointer: true },
-  controller: { teleportPointer: true },
-  emulate: {
-    headset: {
-      position: [0, 1, 0],
-    },
-    controller: {
-      left: {
-        position: [-0.2, 1, -0.3],
-      },
-      right: {
-        position: [0.2, 1, -0.3],
-      },
-    },
-  },
-});
+const store = createXRStore();
 
 const Scene = () => {
-  const [position, setPosition] = useState(new Vector3());
   return (
     <Fragment>
       <button
@@ -52,26 +36,33 @@ const Scene = () => {
       >
         Enter VR
       </button>
-      <Canvas camera={{ position: [-9, 2, 10], fov: 30 }}>
-        <XR store={store}>
-          <IfInSessionMode deny={["immersive-vr", "immersive-ar"]}>
-            <CameraControls makeDefault />
-          </IfInSessionMode>
-          <fog attach="fog" args={["#d0d0d0", 30, 80]} />
-          <ambientLight intensity={0.4} />
-          <Light />
-          {/* <XROrigin position={position} /> */}
-          {/* <TeleportTarget onTeleport={setPosition}> */}
-          {/* <mesh scale={[10, 1, 10]} position={[0, -0.5, 0]}> */}
-          <Territory />
-          {/* </mesh> */}
-          {/* </TeleportTarget> */}
-
-          {/* <Camera /> */}
-          {/* <gridHelper scale={5} /> */}
-          <Sky inclination={0.52} />
-        </XR>
-      </Canvas>
+      <KeyboardControls
+        map={[
+          { name: "forward", keys: ["ArrowUp", "w", "W"] },
+          { name: "backward", keys: ["ArrowDown", "s", "S"] },
+          { name: "left", keys: ["ArrowLeft", "a", "A"] },
+          { name: "right", keys: ["ArrowRight", "d", "D"] },
+        ]}
+      >
+        <Canvas camera={{ position: [-9, 2, 10], fov: 30 }}>
+          <XR store={store}>
+            {/* <IfInSessionMode deny={["immersive-vr", "immersive-ar"]}>
+              <CameraControls makeDefault />
+            </IfInSessionMode> */}
+            <Sky inclination={0.52} />
+            <fog attach="fog" args={["#d0d0d0", 30, 80]} />
+            <ambientLight intensity={0.4} />
+            <Light />
+            <Physics gravity={[0, -30, 0]} debug>
+              <Territory />
+              <Control />
+            </Physics>
+            {/* <Camera /> */}
+            {/* <gridHelper scale={5} /> */}
+            <PointerLockControls />
+          </XR>
+        </Canvas>
+      </KeyboardControls>
       <Loader />
     </Fragment>
   );

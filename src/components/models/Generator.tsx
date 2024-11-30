@@ -109,7 +109,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export default function GeneratorModel(props: JSX.IntrinsicElements["group"]) {
+export default function Generator(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("/generator/scene.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
