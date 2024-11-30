@@ -7,56 +7,58 @@ Source: https://sketchfab.com/3d-models/cybertruck-f3c9f419c0924e968deed17196248
 Title: Cybertruck
 */
 
-import * as THREE from "three";
-import { useGLTF } from "@react-three/drei";
-import { GLTF } from "three-stdlib";
+import * as THREE from 'three'
+import React from 'react'
+import { useGLTF } from '@react-three/drei'
+import { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
   nodes: {
-    Object_11: THREE.Mesh;
-    Object_12: THREE.Mesh;
-    Object_13: THREE.Mesh;
-    Object_14: THREE.Mesh;
-    Object_16: THREE.Mesh;
-    Object_17: THREE.Mesh;
-    Object_19: THREE.Mesh;
-    Object_20: THREE.Mesh;
-    Object_21: THREE.Mesh;
-    Object_22: THREE.Mesh;
-    Object_24: THREE.Mesh;
-    Object_25: THREE.Mesh;
-    Object_27: THREE.Mesh;
-    Object_28: THREE.Mesh;
-    Object_30: THREE.Mesh;
-    Object_31: THREE.Mesh;
-    Object_32: THREE.Mesh;
-    Object_36: THREE.Mesh;
-    Object_34: THREE.Mesh;
-    Object_40: THREE.Mesh;
-    Object_38: THREE.Mesh;
-    Object_4: THREE.Mesh;
-    Object_5: THREE.Mesh;
-    Object_6: THREE.Mesh;
-    Object_7: THREE.Mesh;
-    Object_8: THREE.Mesh;
-    Object_9: THREE.Mesh;
-  };
+    Object_11: THREE.Mesh
+    Object_12: THREE.Mesh
+    Object_13: THREE.Mesh
+    Object_14: THREE.Mesh
+    Object_16: THREE.Mesh
+    Object_17: THREE.Mesh
+    Object_19: THREE.Mesh
+    Object_20: THREE.Mesh
+    Object_21: THREE.Mesh
+    Object_22: THREE.Mesh
+    Object_24: THREE.Mesh
+    Object_25: THREE.Mesh
+    Object_27: THREE.Mesh
+    Object_28: THREE.Mesh
+    Object_30: THREE.Mesh
+    Object_31: THREE.Mesh
+    Object_32: THREE.Mesh
+    Object_36: THREE.Mesh
+    Object_34: THREE.Mesh
+    Object_40: THREE.Mesh
+    Object_38: THREE.Mesh
+    Object_4: THREE.Mesh
+    Object_5: THREE.Mesh
+    Object_6: THREE.Mesh
+    Object_7: THREE.Mesh
+    Object_8: THREE.Mesh
+    Object_9: THREE.Mesh
+  }
   materials: {
-    Stainless_Steel: THREE.MeshStandardMaterial;
-    Glass: THREE.MeshStandardMaterial;
-    Black_Metal: THREE.MeshStandardMaterial;
-    Door_Handle: THREE.MeshStandardMaterial;
-    Black_Leather: THREE.MeshStandardMaterial;
-    Screen: THREE.MeshStandardMaterial;
-    Tire: THREE.MeshStandardMaterial;
-    White_Emission: THREE.MeshStandardMaterial;
-    Red_Emission: THREE.MeshStandardMaterial;
-    Dashboard: THREE.MeshStandardMaterial;
-  };
-};
+    Stainless_Steel: THREE.MeshStandardMaterial
+    Glass: THREE.MeshStandardMaterial
+    Black_Metal: THREE.MeshStandardMaterial
+    Door_Handle: THREE.MeshStandardMaterial
+    Black_Leather: THREE.MeshStandardMaterial
+    Screen: THREE.MeshStandardMaterial
+    Tire: THREE.MeshStandardMaterial
+    White_Emission: THREE.MeshStandardMaterial
+    Red_Emission: THREE.MeshStandardMaterial
+    Dashboard: THREE.MeshStandardMaterial
+  }
+  animations: GLTFAction[]
+}
 
-export default function CyberTruck(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/mars-surface/cyber-truck/scene.gltf") as GLTFResult;
+export function Model(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF('/cyber-truck/scene.gltf') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group position={[-0.729, 0.914, 0.724]}>
@@ -80,11 +82,7 @@ export default function CyberTruck(props: JSX.IntrinsicElements["group"]) {
           <mesh geometry={nodes.Object_24.geometry} material={materials.Black_Leather} />
           <mesh geometry={nodes.Object_25.geometry} material={materials.Stainless_Steel} />
         </group>
-        <group
-          position={[-0.722, -0.216, 0.006]}
-          rotation={[0, 0, 0.102]}
-          scale={[0.004, 0.071, 0.109]}
-        >
+        <group position={[-0.722, -0.216, 0.006]} rotation={[0, 0, 0.102]} scale={[0.004, 0.071, 0.109]}>
           <mesh geometry={nodes.Object_27.geometry} material={materials.Black_Metal} />
           <mesh geometry={nodes.Object_28.geometry} material={materials.Screen} />
         </group>
@@ -95,19 +93,11 @@ export default function CyberTruck(props: JSX.IntrinsicElements["group"]) {
         </group>
         <group position={[-1.122, -0.637, 0.48]} rotation={[0, Math.PI / 2, 0]}>
           <mesh geometry={nodes.Object_34.geometry} material={materials.Tire} />
-          <mesh
-            geometry={nodes.Object_36.geometry}
-            material={materials.Black_Metal}
-            position={[-0.056, 0, 0]}
-          />
+          <mesh geometry={nodes.Object_36.geometry} material={materials.Black_Metal} position={[-0.056, 0, 0]} />
         </group>
         <group position={[0.995, -0.637, 0.48]} rotation={[0, Math.PI / 2, 0]}>
           <mesh geometry={nodes.Object_38.geometry} material={materials.Tire} />
-          <mesh
-            geometry={nodes.Object_40.geometry}
-            material={materials.Black_Metal}
-            position={[-0.056, 0, 0]}
-          />
+          <mesh geometry={nodes.Object_40.geometry} material={materials.Black_Metal} position={[-0.056, 0, 0]} />
         </group>
         <mesh geometry={nodes.Object_4.geometry} material={materials.Stainless_Steel} />
         <mesh geometry={nodes.Object_5.geometry} material={materials.Glass} />
@@ -117,7 +107,7 @@ export default function CyberTruck(props: JSX.IntrinsicElements["group"]) {
         <mesh geometry={nodes.Object_9.geometry} material={materials.Dashboard} />
       </group>
     </group>
-  );
+  )
 }
 
-useGLTF.preload("/mars-surface/cyber-truck/scene.gltf");
+useGLTF.preload('/cyber-truck/scene.gltf')

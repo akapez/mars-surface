@@ -23,8 +23,8 @@ export default function Territory({ ready }: TerritoryProps) {
       <RigidBody type="fixed" colliders="trimesh">
         <CyberTruck
           scale={[1.5, 1.5, 1.5]}
-          position={[7.14, 1.7, -20.31]}
-          rotation={[0.05, -6.71, 0]}
+          position={[7.14, 0.5, -20.31]}
+          rotation={[0.05, 7.3, 0]}
         />
       </RigidBody>
 
