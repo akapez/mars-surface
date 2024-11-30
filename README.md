@@ -2,6 +2,12 @@
 
 This project is a WebXR application designed to provide an immersive experience of walking the surface of Mars.
 
+## Demo Video
+
+Check out a quick demo recorded on the Meta Quest 3:
+
+https://github.com/user-attachments/assets/9a646864-62e4-4a4e-8a46-ddfb541f562f
+
 ## Libraries Used
 
 - **React-three/fiber**: [Documentation](https://r3f.docs.pmnd.rs/getting-started/introduction) - A React renderer for Three.js.
