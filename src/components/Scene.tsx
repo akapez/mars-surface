@@ -1,15 +1,22 @@
 import { Canvas } from "@react-three/fiber";
-import { Fragment } from "react";
-import Territory from "./Territory";
+import { Fragment, useState } from "react";
 import { KeyboardControls, Loader, PointerLockControls, Sky } from "@react-three/drei";
 import { createXRStore, XR } from "@react-three/xr";
 import { Light } from "./helpers";
-import { Control } from "./Control";
 import { Physics } from "@react-three/rapier";
+
+import Territory from "./Territory";
+import { Control } from "./Control";
 
 const store = createXRStore();
 
-const Scene = () => {
+export default function Scene() {
+  const [ready, setReady] = useState<boolean>(false);
+
+  const handleVR = () => {
+    setReady(true);
+    store.enterVR();
+  };
   return (
     <Fragment>
       <button
@@ -32,7 +39,7 @@ const Scene = () => {
           transform: "translate(-50%, 0)",
           userSelect: "none",
         }}
-        onClick={() => store.enterVR()}
+        onClick={handleVR}
       >
         Enter VR
       </button>
@@ -54,7 +61,7 @@ const Scene = () => {
             <ambientLight intensity={0.4} />
             <Light />
             <Physics gravity={[0, -30, 0]}>
-              <Territory />
+              <Territory ready={ready} />
               <Control />
             </Physics>
             {/* <Camera /> */}
@@ -66,6 +73,4 @@ const Scene = () => {
       <Loader />
     </Fragment>
   );
-};
-
-export default Scene;
+}

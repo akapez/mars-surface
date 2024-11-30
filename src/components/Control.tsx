@@ -11,7 +11,7 @@ import { IfInSessionMode } from "@react-three/xr";
 import { useRef } from "react";
 import * as THREE from "three";
 
-import { VRControl } from "./VRControl";
+import VRControl from "./VRControl";
 
 const SPEED = 5;
 const direction = new THREE.Vector3();
