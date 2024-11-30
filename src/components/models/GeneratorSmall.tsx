@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function GeneratorSmall(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/generator-small/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/mars-surface/generator-small/scene.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -33,4 +33,4 @@ export default function GeneratorSmall(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/generator-small/scene.gltf");
+useGLTF.preload("/mars-surface/generator-small/scene.gltf");

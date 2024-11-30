@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function Rocket(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/rocket/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/mars-surface/rocket/scene.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -36,4 +36,4 @@ export default function Rocket(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/rocket/scene.gltf");
+useGLTF.preload("/mars-surface/rocket/scene.gltf");

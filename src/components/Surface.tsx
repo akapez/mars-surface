@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function Surface(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/surface/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/mars-surface/surface/scene.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group position={[-0.053, 0.27, -0.126]} rotation={[-1.192, 0.174, -0.018]}>
@@ -35,4 +35,4 @@ export default function Surface(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/surface/scene.gltf");
+useGLTF.preload("/mars-surface/surface/scene.gltf");

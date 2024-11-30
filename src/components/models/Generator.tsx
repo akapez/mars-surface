@@ -110,7 +110,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function Generator(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/generator/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/mars-surface/generator/scene.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group position={[0.244, 4.52, 0]}>
@@ -351,4 +351,4 @@ export default function Generator(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/generator/scene.gltf");
+useGLTF.preload("/mars-surface/generator/scene.gltf");

@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function LandingPad(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/landing-pad/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/mars-surface/landing-pad/scene.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -35,4 +35,4 @@ export default function LandingPad(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/landing-pad/scene.gltf");
+useGLTF.preload("/mars-surface/landing-pad/scene.gltf");

@@ -32,7 +32,7 @@ type GLTFResult = GLTF & {
 
 export default function Spaceman(props: JSX.IntrinsicElements["group"]) {
   const ref = React.useRef<THREE.Group>(null);
-  const { scene, animations } = useGLTF("/spaceman/scene.gltf");
+  const { scene, animations } = useGLTF("/mars-surface/spaceman/scene.gltf");
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone) as GLTFResult;
   const { actions } = useAnimations(animations, ref);
@@ -64,4 +64,4 @@ export default function Spaceman(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/spaceman/scene.gltf");
+useGLTF.preload("/mars-surface/spaceman/scene.gltf");
