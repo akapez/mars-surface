@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cybertruck
+* source:	https://sketchfab.com/3d-models/cybertruck-f3c9f419c0924e968deed17196248c98
+* author:	SimonStrikesBack (https://sketchfab.com/SimonStrikesBack)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cybertruck" (https://sketchfab.com/3d-models/cybertruck-f3c9f419c0924e968deed17196248c98) by SimonStrikesBack (https://sketchfab.com/SimonStrikesBack) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,5 +1,12 @@
+import { Fragment } from "react";
+import Scene from "./components/Scene";
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <Fragment>
+      <Scene />
+    </Fragment>
+  );
 }
 
 export default App;
